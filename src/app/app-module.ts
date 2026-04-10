@@ -40,7 +40,10 @@ import CustomPreset from './core/primeng-settings';
     // PrimeNG
     providePrimeNG({
       theme: {
-        preset: CustomPreset
+        preset: Aura,
+        options: {
+          darkModeSelector: false
+        }
       },
     }),
     MessageService
