@@ -1,31 +1,31 @@
 <div class="min-h-screen flex justify-content-center align-items-center">
 
-  <div class="w-full bg-green-100 grid">
-    <div class="field col-12 text-center">
+  <div class="w-full bg-blue-300 grid">
+    <div class="col-12 text-center">
       <h1 class="my-2">Oih!</h1>
       <p>Para prosseguir, você deve dizer a senha secreta!</p>
     </div>
-    <div class="field col-6 col-offset-3">
+    <div class="col-6 col-offset-3">
       <form [formGroup]="loginForm">
         <div class="grid text-center">
-          <div class="field col-12 p-inputgroup">
+          <div class="col-12 p-inputgroup">
             <input type="text" pInputText id="password" formControlName="password" placeholder="Digite a senha secreta" class="w-full p-2" variant="filled" round>
             @if (wrong) {
               <small class="text-red-500">Resposta errada meu amorzinho, tente de novo!</small>
             }
           </div>
-          <div class="field col-12">
-            <p-button label="Acessar" icon="pi pi-arrow-right" iconPos="right" fluid (onClick)="navigateToHome()"></p-button>
+          <div class="col-12">
+            <p-button label="Acessar" icon="pi pi-arrow-right" iconPos="right" fluid (onClick)="navigateToHome()" severity="primary"></p-button>
           </div>
-          <div class="field col-12">
-            <p-button label="Dica" icon="pi pi-question-circle" iconPos="right" fluid variant="text" (onClick)="showHint()"></p-button>
+          <div class="col-12">
+            <p-button label="Dica" icon="pi pi-question-circle" iconPos="right" fluid variant="text" (onClick)="showHint()" severity="help"></p-button>
           </div>
         </div>
       </form>
     </div>
-    <div class="field col-12">
+    <div class="col-6 col-offset-3 text-center">
       @if (hint) {
-        <p-message class="my-3" severity="info">O primeiro presente/comida que eu te dei</p-message>
+        <small class="text-primary-800">O primeiro presente/comida que eu te dei</small>
       }
     </div>
   </div>

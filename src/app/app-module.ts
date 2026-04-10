@@ -14,6 +14,7 @@ import { ButtonModule } from 'primeng/button';
 import { MessageModule } from 'primeng/message';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import CustomPreset from './core/primeng-settings';
 
 @NgModule({
   declarations: [
@@ -39,10 +40,7 @@ import { ToastModule } from 'primeng/toast';
     // PrimeNG
     providePrimeNG({
       theme: {
-        preset: Aura,
-        options: {
-          darkModeSelector: false || 'none'
-        }
+        preset: CustomPreset
       },
     }),
     MessageService

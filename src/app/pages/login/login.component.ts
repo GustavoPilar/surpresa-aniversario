@@ -78,11 +78,12 @@ export class LoginComponent implements OnInit {
   public navigateToHome(): void {
     let answer: string = this.loginForm.get('password')?.value;
 
-    if (answer != null && answer.toLocaleLowerCase() === "chocolate") {
+    if (answer != null && answer.toLocaleLowerCase().trim() === "chocolate") {
       this.router.navigate(["home"]);
     }
     else {
       this.wrong = true;
+      this.loginForm.reset();
     }
   }
 
